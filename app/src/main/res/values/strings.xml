@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ReservationS</string>
+    <string name="title_activity_informmap">Map</string>
+    <string name="title_activity_myloc">Map</string>
+</resources>

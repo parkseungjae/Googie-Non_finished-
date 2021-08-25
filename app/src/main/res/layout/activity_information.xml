@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".informationActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:layout_gravity="top"
+            android:text="원주 국민 체육센터"
+            />
+
+            <Button
+                android:id="@+id/chk_Gmap"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="지도상 위치 보기">
+
+            </Button>
+
+
+            
+        </LinearLayout>
+
+    
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="주소 : 강원 원주시 남원로 551 원주국민체육센터"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="전화번호 : 033-747-4315"
+                android:textSize="20dp">
+
+
+            </TextView>
+
+            <Button
+                android:layout_width="192dp"
+                android:layout_height="50dp"
+                android:text="전화걸기"
+                android:textSize="20dp"
+                android:id="@+id/callbtn">
+
+            </Button>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이용가능시간 : 평일 6:00 ~ 21:00 (월 휴무)"
+            android:textSize="18dp">
+
+        </TextView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Chronometer
+                android:id="@+id/chronometer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:format="예약에 걸린 시간 %S"
+                android:textSize="20dp">
+
+            </Chronometer>
+
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="예약 시작"
+            android:id="@+id/btnStart"/>
+
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoCal"
+                android:text="날짜 설정"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rdoTime"
+                android:text="시간 설정"/>
+
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <CalendarView
+                    android:layout_width="430dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/calendarView1"
+                    android:showWeekNumber="false"/>
+
+                <TimePicker
+                    android:id="@+id/timePicker1"
+                    android:layout_width="420dp"
+                    android:layout_height="match_parent"
+                    android:timePickerMode="spinner" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#CCCCCC">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="예약완료"
+                android:id="@+id/btnEnd"/>
+
+            <TextView
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="년" />
+
+            <TextView
+                android:id="@+id/tvmonth"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
+                android:text="00" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:text="월"/>
+
+            <TextView
+                android:id="@+id/tvday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="00" />
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:text="일"/>
+
+            <TextView
+                android:id="@+id/tvhour"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="00" />
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:text="시"/>
+
+            <TextView
+                android:id="@+id/tvminute"
+                android:layout_width="28dp"
+                android:layout_height="match_parent"
+                android:text="00" />
+
+            <TextView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:text="분 예약됨" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
